@@ -1,0 +1,3 @@
+
+MultiWiiConf_dev_20111017
+MultiWiiConf_dev_20111017.jar,core.jar,serial.jar,RXTXcomm.jar,controlP5.jar,opengl.jar,jogl.jar,gluegen-rt.jar
