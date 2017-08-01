@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        div {
+            color: blue;
+            margin: 2px;
+            font-size: 14px;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    [] 是一个数组吗？<b></b>
+    <div>jQuery.isFunction( objs[ 0 ] ) = <span></span></div>
+    <div>jQuery.isFunction( objs[ 1 ] ) = <span></span></div>
+    <div>jQuery.isFunction( objs[ 2 ] ) = <span></span></div>
+    <div>jQuery.isFunction( objs[ 3 ] ) = <span></span></div>
+    <div>jQuery.isFunction( objs[ 4 ] ) = <span></span></div>
+</body>
+</html>
+<script>
+    $(function() {
+        $("b").append("" + $.isArray([]));
+    });
+    $(function() {
+        function stub() {}
+
+        var objs = [
+            function() {},
+            { x: 15, y: 20 },
+            null,
+            stub,
+            "function"
+        ];
+        $.each(objs,
+            function(i) {
+                var isFunc = $.isFunction(objs[i]);
+                $("span").eq(i).text(isFunc);
+            });
+    });
+    $(function() {
+        function fun(html) {
+            document.body.innerHTML += "<br>" + html;
+        }
+
+        fun($.isEmptyObject({})); // true 
+        fun($.isEmptyObject({ foo: "bar" })); // false 
+    });
+    $(function() {
+        function fun(html) {
+            document.body.innerHTML += "<br>" + html;
+        }
+
+        fun($.isPlainObject({}));
+        fun($.isPlainObject("test"));
+        fun($.isPlainObject(document.location)); //在 IE 8 中返回 true
+    });
+    $(function() {
+        $("b").append("" + $.isWindow(window));
+    });
+    $(function() {
+        function fun(html) {
+            document.body.innerHTML += "<br>" + html;
+        }
+
+        // true
+        fun($.isNumeric("-10"));
+        fun($.isNumeric("0"));
+        fun($.isNumeric(0xFF));
+        fun($.isNumeric("0xFF"));
+        fun($.isNumeric("8e5"));
+        fun($.isNumeric("3.1415"));
+        fun($.isNumeric(+10));
+        fun($.isNumeric(0144));
+        //false
+        fun($.isNumeric("-0x42"));
+        fun($.isNumeric("7.2acdgs"));
+        fun($.isNumeric(""));
+        fun($.isNumeric({}));
+        fun($.isNumeric(NaN));
+        fun($.isNumeric(null));
+        fun($.isNumeric(true));
+        fun($.isNumeric(Infinity));
+        fun($.isNumeric(undefined));
+    });
+</script>

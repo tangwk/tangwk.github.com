@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="log"></div>
+</body>
+</html>
+<script>
+    $(function () {
+        var object1 = {
+            apple: 0,
+            banana: { weight: 52, price: 100 },
+            cherry: 97
+        };
+        var object2 = {
+            banana: { price: 200 },
+            durian: 100
+        };
+        /* object2 合并到 object1 中 */
+        $.extend(object1, object2);
+        var printObj = typeof JSON != "undefined" ? JSON.stringify : function (obj) {
+            var arr = [];
+            $.each(obj, function (key, val) {
+                var next = key + ": ";
+                next += $.isPlainObject(val) ? printObj(val) : val;
+                arr.push(next);
+            });
+            return "{ " + arr.join(", ") + " }";
+        };
+        $("#log").append(printObj(object1));
+    })
+</script>

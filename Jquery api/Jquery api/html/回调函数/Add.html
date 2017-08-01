@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    $(function () {
+        //使用 callbacks.add() 添加新的回调到回调列表：
+        var foo = function (value) {
+            alert("foo: " + value);
+        };
+        // 另一个函数将被添加到列表
+        var bar = function (value) {
+            alert("bar: " + value);
+        };
+        var callbacks = $.Callbacks();
+        // 添加函数 "foo" 到列表
+        callbacks.add(foo);
+        // 传入参数调用所以回调列表函数
+        callbacks.fire("hello");
+        // 输出: "foo: hello"	 
+        // 添加函数 "bar" 到列表
+        callbacks.add(bar);
+        // 传入参数调用所以回调列表函数
+        callbacks.fire("world");
+        // 输出:
+        // "foo: world"
+        // "bar: world"
+    })
+</script>

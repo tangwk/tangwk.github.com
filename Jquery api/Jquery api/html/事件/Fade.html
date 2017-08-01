@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<p>This is a paragraph.</p>
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(".btn1").click(function () {
+            $("p").fadeOut();
+        });
+        $(".btn2").click(function () {
+            //使用淡入效果来显示一个隐藏的 < p > 元素：
+            $("p").fadeIn();
+        });
+        $("p").fadeTo("fast", 0.25, function () {
+            alert("Animation Done.");
+        });
+        $("p").fadeToggle("fast", function () {
+            alert("Animation Done.");
+        });
+    });
+</script>

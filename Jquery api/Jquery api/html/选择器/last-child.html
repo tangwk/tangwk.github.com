@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>匹配最后一个子元素
+    :last  只匹配最后一个元素，而此选择符将为每个父元素匹配最后一个子元素
+</p>
+    <ul>
+        <li>John</li>
+        <li>Karl</li>
+        <li>Brandon</li>
+    </ul>
+    <ul>
+        <li>Glen</li>
+        <li>Tane</li>
+        <li>Ralph</li>
+    </ul>
+    <div id="n1">
+        <div id="n2" class="abc">
+            <label id="n3">label1</label>
+            <span id="n4">span1</span>
+            <span id="n5" class="abc">span2</span>
+            <span id="n6">span3</span>
+        </div>
+        <div id="n7">
+            <span id="n8" class="abc">span1</span>
+            <span id="n9">span2</span>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("ul li:last-child").css({ "background-color": "yellow" });
+        $("span:last-of-type").css({ "background-color": "yellow" });
+    })</script>

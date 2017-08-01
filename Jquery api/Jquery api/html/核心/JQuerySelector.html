@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li id="foo">foo</li>
+        <li id="bar">bar</li>
+        <li id="baz">baz</li>
+    </ul>
+</body>
+</html>
+<script>
+    document.write($('li').index(document.getElementById('bar'))); //1，传递一个DOM对象，返回这个对象在原先集合中的索引位置
+    document.write($('li').index($('#bar'))); //1，传递一个jQuery对象
+    document.write($('li').index($('li:gt(0)'))); //1，传递一组jQuery对象，返回这个对象中第一个元素在原先集合中的索引位置
+    document.write($('#bar').index('li')); //1，传递一个选择器，返回#bar在所有li中的索引位置
+    document.write($('#bar').index()); //1，不传递参数，返回这个元素在同辈中的索引位置。  
+</script>

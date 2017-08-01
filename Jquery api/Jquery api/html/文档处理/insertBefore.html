@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>把所有段落插入到一个元素之前，与$("#foo").before("p")相同</h4>
+    <p>I would like to say:</p>
+    <b id="foo" style="background-color: yellow">Hello</b>
+    <script type="text/javascript">
+        $("p").insertBefore($("#foo")[0]);
+    </script>
+</body>
+</html>

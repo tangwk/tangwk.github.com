@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button id="go"> Run</button>
+    <div id="block">Hello!</div>
+</body>
+</html>
+<script>
+    // 在一个动画中同时应用三种类型的效果
+    $("#go").click(function () {
+        $("#block").animate({
+            width: "90%",
+            height: "100%",
+            fontSize: "10em",
+            borderWidth: 10
+        }, 1000);
+    });
+</script>

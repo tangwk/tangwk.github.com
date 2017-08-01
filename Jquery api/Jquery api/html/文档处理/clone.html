@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>克隆所有b元素（并选中这些克隆的副本），然后将他们前置到所有段落中</h4>
+<b>Hello</b>
+<p>, how are you?</p>
+<p>,ni hao a </p>
+    <button>Clone Me！</button>
+    <script type="text/javascript">
+
+        $("b").clone().prependTo("p");
+        $("button").click(function () {
+            $(this).clone(true).insertAfter(this);
+        });
+
+    </script>
+</body>
+</html>

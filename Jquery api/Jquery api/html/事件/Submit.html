@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form name="input" action="" method="get">
+        First name:
+        <input type="text" name="FirstName" value="Mickey" size="20">
+        <br />Last name:
+        <input type="text" name="LastName" value="Mouse" size="20">
+        <br />
+        <input type="submit" value="Submit">
+    </form> 
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            alert("Submitted");
+        });
+    });
+</script>

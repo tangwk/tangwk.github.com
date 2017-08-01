@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <h2>这是标题</h2>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button>请点击这里</button>
+</body>
+</html>
+<script type="text/javascript">
+    var jq = $.noConflict();
+    jq(document).ready(function () {
+        jq("button").click(function () {
+            jq("p").hide();
+        });
+    });
+</script>

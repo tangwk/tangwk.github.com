@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <input id="whichkey" value="type something">
+    <div id="log"></div>
+</body>
+</html>
+<script>
+    $('#whichkey').bind('keydown', function (e) {
+        //记录按键。
+        $('#log').html(e.type + ': ' + e.which);
+    });
+</script>

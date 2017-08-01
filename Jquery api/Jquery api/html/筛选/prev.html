@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>
+
+        找到每个段落紧邻的前一个同辈元素。
+    </h4>
+    <p>Hello</p><div><span>Hello Again</span></div><p>And Again</p>
+    <script type="text/javascript">
+
+    $('li.item-a').parentsUntil('.level-1')
+ .css('background-color', 'red');
+
+    </script>
+</body>
+</html>

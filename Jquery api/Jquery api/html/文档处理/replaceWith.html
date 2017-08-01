@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>把所有段落标记替换成加粗的标记</h4>
+
+    <p>Hello</p>
+    <p>cruel</p>
+    <p>World</p>
+   
+<h4>用第一段替换第三段，你可以发现他是移动到目标位置来替换，而不是复制一份来替换</h4>
+    <div class="container">
+        <div class="inner first">Hello</div>
+        <div class="inner second">And</div>
+        <div class="inner third">Goodbye</div>
+    </div>
+    <script type="text/javascript">
+
+        $("p").replaceWith("<b>Paragraph.</br>");
+        $('.third').replaceWith($('.first'));
+    </script>
+</body>
+</html>

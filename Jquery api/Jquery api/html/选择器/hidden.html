@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr style="display:none"><td>Value 1</td></tr>
+        <tr><td>Value 2</td></tr>
+    </table>
+    <hr />
+    <form>
+        <p>匹配所有不可见元素，或者type为hidden的元素</p>
+        <input type="text" name="email" />
+        <input type="hidden" name="id" />
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("tr:hidden").css({ "background-color": "yellow" });
+        $("inout:hidden").css({ "background-color": "yellow" });
+
+    })</script>

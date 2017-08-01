@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>
+
+        取得一个包含着所有匹配元素的祖先元素的元素集合（不包含根元素）。可以通过一个可选的表达式进行筛选。
+        找到每个span元素的所有祖先元素。
+    </h4>
+   
+    
+        <div><p><span>Hello</span></p><span>Hello Again</span></div>
+    
+    <script type="text/javascript">
+
+        $("span").parents().css('background-color', 'red');
+
+    </script>
+</body>
+</html>

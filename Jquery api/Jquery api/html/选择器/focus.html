@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <link href="../../css/focus.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="content">
+        <input tabindex="1">
+        <input tabindex="2">
+        <select tabindex="3">
+            <option>select menu</option>
+        </select>
+        <div tabindex="4">
+            a div
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#content").delegate("*", "focus blur", function (event) {
+            var elem = $(this);
+            setTimeout(function () {
+                elem.toggleClass("focused", elem.is(":focus"));
+            }, 0);
+        });
+       
+
+
+    })</script>
+
+
+

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+<h4>停止动画队列中的名称</h4>
+<p id="cd1">test1</p>
+<p id="cd2">test2</p>
+<p id="cd3">test3</p>
+<script type="text/javascript">
+    //$("p#cd1").hide();
+    $("p#cd2").hide("slow");
+    $("p#cd3")
+        .hide("fast",
+            function() {
+                $(this).text("Animation Done！");
+            });
+
+</script>
+</body>
+</html>

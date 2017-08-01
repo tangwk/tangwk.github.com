@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button>序列化对象</button>
+    <div></div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        //按照key / value对序列化普通对象。
+        personObj = new Object();
+        personObj.firstname = "Bill";
+        personObj.lastname = "Gates";
+        personObj.age = 60;
+        personObj.eyecolor = "blue";
+        $("button").click(function () {
+            $("div").text($.param(personObj));
+        });
+    });
+</script>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <button class="btn1">Toggle</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(".btn1").click(function () {
+            $("p").toggle();
+        });
+    });
+</script>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="elemment">测试</div>
+
+<script type="text/javascript">
+    (function($) {
+        // feature test for support of a CSS property
+        // and a proprietary alternative
+        // ...
+        if ($.support.someCSSProp && $.support.someCSSProp !== "someCSSProp") {
+            // Set cssHooks for browsers that
+            // support only a vendor-prefixed someCSSProp
+            $.cssHooks.someCSSProp = {
+                get: function(elem, computed, extra) {
+                    return $.css(elem, $.support.someCSSProp);
+                },
+                set: function(elem, value) {
+                    elem.style[$.support.someCSSProp] = value;
+                }
+            };
+        } else if (supportsProprietaryAlternative) {
+            $.cssHooks.someCSSProp = {
+                get: function(elem, computed, extra) {
+                    // Handle crazy conversion from the proprietary alternative
+                },
+                set: function(elem, value) {
+                    // Handle crazy conversion to the proprietary alternative
+                }
+            }
+        }
+    })(jQuery);
+    $("#element").css("borderRadius", "10px");
+</script>
+</body>
+</html>

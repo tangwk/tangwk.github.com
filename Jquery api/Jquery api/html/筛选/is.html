@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>根据选择器、DOM元素或 jQuery 对象来检测匹配元素集合，如果其中至少有一个元素符合这个给定的表达式就返回true。
+
+
+如果没有元素符合，或者表达式无效，都返回'false'。
+</h4>
+    <ul>
+        <li><strong>list</strong> item 1 - one strong tag</li>
+        <li><strong>list</strong> item <strong>2</strong> - two <span>strong tags</span></li>
+        <li>list item 3</li>
+    </ul>
+    <script type="text/javascript">
+        $("li").click(function () {
+            var $li = $(this),
+              isWithTwo = $li.is(function () {
+                  return $('strong', this).length === 2;
+              });
+            if (isWithTwo) {
+                $li.css("background-color", "green");
+            } else {
+                $li.css("background-color", "red");
+            }
+        });
+    </script>
+</body>
+</html>

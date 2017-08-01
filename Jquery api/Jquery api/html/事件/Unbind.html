@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <button>请点击这里</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        //为每个匹配元素的特定事件绑定事件处理函数。
+        $("button").bind("click", function () {
+            $($(this).text());
+            $("p").unbind("click");
+        });
+    });
+</script>

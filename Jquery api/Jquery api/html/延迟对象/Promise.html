@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var div = $("<div />");
+
+    div.promise().done(function (arg1) {
+        // will fire right away and alert "true"
+        alert(this === div && arg1 === div);
+    });
+</script>

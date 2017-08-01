@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>演示带有不同参数的fadeOut方法</h4>
+    <button class="show">点击按钮使得矩形淡出</button>
+    <div class="test1" style="background-color: yellow; height: 80px; width: 80px; "></div>
+    <div class="test2" style="background-color: red; height: 80px; width: 80px;"></div>
+    <div class="test3" style="background-color: green; height: 80px; width: 80px; "></div>
+
+    <script type="text/javascript">
+        $(document)
+            .ready(function () {
+                $(".show")
+                    .click(function () {
+                        $(".test1").fadeOut();
+                        $(".test2").fadeOut("slow");
+                        $(".test3").fadeOut(3000);
+                    });
+            });
+    </script>
+</body>
+</html>

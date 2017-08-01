@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    $(function() {
+        // 将被添加到列表的简单函数
+        var foo = function(value1, value2) {
+            alert("foo: " + value1 + "," + value2);
+        }
+        // 另一个将被添加到列表的函数
+        var bar = function(value1, value2) {
+            alert("bar: " + value1 + "," + value2);
+        }
+        var callbacks = $.Callbacks();
+        // 添加两个函数
+        callbacks.add(foo);
+        //使用 callbacks.fire() 用任何已传递的参数调用列表中的回调:
+        callbacks.add(bar);
+        //清空回调列表
+        callbacks.empty();
+        callbacks.fire("hello again");
+        // 确认所有回调列表是否被移除
+        alert(callbacks.has(foo));
+        // false
+        alert(callbacks.has(bar));
+        // false
+    });
+    $(function() {
+        var foo = function (value) {
+            console.log('foo:' + value);
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(foo);
+        callbacks.fire('hello'); // outputs: 'foo: hello'
+        callbacks.fire('world '); // outputs: 'foo: world'
+        console.log(callbacks.fired());
+    });
+    $(function() {
+        var log = function (value1, value2) {
+            console.log('Received:' + value1 + ',' + value2);
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(log);
+        callbacks.fireWith(window, ['foo', 'bar']);
+    });
+    $(function() {
+        var foo = function (value1, value2) {
+            console.log('Received:' + value1 + ',' + value2);
+        }
+        var bar = function (value1, value2) {
+            console.log('foobar');
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(foo);
+        console.log(callbacks.has(foo)); // true
+        console.log(callbacks.has(bar)); // false
+    });
+    $(function() {
+        var foo = function (value) {
+            console.log('foo:' + value);
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(foo);
+        callbacks.fire('hello');
+        callbacks.lock();
+        callbacks.fire('world');
+    });
+    $(function() {
+        var foo = function (value) {
+            console.log('foo:' + value);
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(foo);
+        callbacks.fire('hello');
+        callbacks.lock();
+        console.log(callbacks.locked()); //true
+    });
+    $(function() {
+        var foo = function (value) {
+            console.log('foo:' + value);
+        }
+        var callbacks = $.Callbacks();
+        callbacks.add(foo);
+        callbacks.fire('hello'); // outputs: 'foo: hello'
+        callbacks.remove(foo);
+        callbacks.fire('world');
+    });
+</script>

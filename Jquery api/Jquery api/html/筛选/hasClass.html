@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>给包含某个类的元素进行一个动画</h4>
+    <div class="protected">ememem</div><div>hahhah</div>
+
+    <script type="text/javascript">
+        $("div").click(function () {
+            if ($(this).hasClass("protected"))
+                $(this)
+                  .animate({ left: -10 })
+                  .animate({ left: 10 })
+                  .animate({ left: -10 })
+                  .animate({ left: 10 })
+                  .animate({ left: 0 });
+        });
+    </script>
+</body>
+</html>

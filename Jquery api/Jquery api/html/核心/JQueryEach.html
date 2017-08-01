@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div>
+        each(callback)意味着，每次执行传递进来的函数时，函数中的this关键字都指向一个不同的DOM元素（每次都是一个不同的匹配元素）。
+    </div>
+<img/><img />
+</body>
+</html>
+<script>
+    //得到对应的匹配的两张图片
+    $("img").each(function (i) {
+        this.src = "test" + i + ".jpg";
+    });
+</script>

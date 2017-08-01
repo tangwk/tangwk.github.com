@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button id="btn1">把数据添加到 div 元素</button><br />
+    <button id="btn2">获取已添加到 div 元素的数据</button>
+    <div></div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        //当前执行的处理器被绑定的时候，包含可选的数据传递给jQuery.fn.bind。
+        $("#btn1").click(function () {
+            $("div").data("greeting", "Hello World");
+        });
+        $("#btn2").click(function () {
+            alert($("div").data("greeting"));
+        });
+    });
+</script>

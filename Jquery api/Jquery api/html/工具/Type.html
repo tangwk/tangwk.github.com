@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    这是一个正则表达式? <b></b>
+</body>
+</html>
+<script>
+    $(function () {
+        //$.type() 函数用于确定JavaScript内置对象的类型，并返回小写形式的类型名称。
+        //如果对象是undefined或null，则返回相应的"undefined"或"null"
+        $("b").append("" + jQuery.type(/test/));
+    })
+</script>

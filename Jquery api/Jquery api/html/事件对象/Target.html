@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        span, strong, p {
+            padding: 8px;
+            display: block;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="log"></div>
+    <div>
+    <p>
+        <strong><span>click</span></strong>
+    </p>
+        </div>
+</body>
+</html>
+<script>
+    //Example: 显示点击元素的标签名。
+    $("body").click(function (event) {
+        $("#log").html("clicked: " + event.target.nodeName);
+    });
+</script>

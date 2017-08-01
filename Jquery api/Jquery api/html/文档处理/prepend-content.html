@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>向所有段落中前置一些HTML标记代码</h4>
+    <p>I would like to say:</p>
+    <p>I would like to say: </p>
+    <p>I would like to say: </p>
+    <b class="foo">Hello</b>
+    <b class="foo">Good Bye</b>
+    <script type="text/javascript">
+        //$("p").prepend("<b>Hello </b>");
+        $("p").prepend($(".foo")[0]);
+    </script>
+</body>
+</html>

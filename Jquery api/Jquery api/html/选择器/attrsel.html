@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>找到所有含有 id 属性，并且它的 name 属性是以 man 结尾的</p>
+    <input id="man-news" name="man-news" />
+    <input name="milkman" />
+    <input id="letterman" name="new-letterman" />
+    <input name="newmilk" />
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("input[id][name$='man']").css({ "background-color": "yellow" });
+
+
+    })</script>

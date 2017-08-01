@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>
+        选取所有的p元素，查找并选取span子元素，然后再回过来选取p元素
+    </h4>
+    <p><span>Hello</span>,how are you?</p>
+    <script type="text/javascript">
+        $("p").find("span").end().css("background-color", "yellow");
+    </script>
+</body>
+</html>

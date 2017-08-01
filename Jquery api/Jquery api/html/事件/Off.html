@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<p>点击这个段落修改它的背景颜色。</p>
+<p>点击一下按钮再点击这个段落( click 事件被移除 )。</p>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("p").on("click", function () {
+            $(this).css("background-color", "pink");
+        });
+        $("button").click(function () {
+            $("p").off("click");
+        });
+    });
+</script>

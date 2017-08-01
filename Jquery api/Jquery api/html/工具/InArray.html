@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        div {
+            color: blue;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>"John" 在索引值为 <span></span> 的位置被找到
+</div>
+<div>4 在索引值为 <span></span> 的位置被找到
+</div>
+<div>"Karl" 未被找到，所以返回 <span></span> </div>
+<div>"Pete" 在数组中，但是不在索引值大于2的位置，所以返回 <span></span></div>
+</body>
+</html>
+<script>
+    $(function () {
+        //$.inArray() 函数用于在数组中查找指定值，并返回它的索引值（如果没有找到，则返回-1）
+        var arr = [4, "Pete", 8, "John"];
+        var $spans = $("span");
+        $spans.eq(0).text(jQuery.inArray("John", arr));
+        $spans.eq(1).text(jQuery.inArray(4, arr));
+        $spans.eq(2).text(jQuery.inArray("Karl", arr));
+        $spans.eq(3).text(jQuery.inArray("Pete", arr, 2));
+    })
+</script>

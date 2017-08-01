@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>
+        查找匹配元素内部所有的子节点（包括文本节点）。如果元素是一个iframe，则查找文档内容
+    </h4>
+<p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?
+</p>
+<iframe src="add.html" width="300" height="100"></iframe>
+    
+    <script type="text/javascript">
+        $("p").contents().not("[nodeType=1]").wrap("<b/>");
+        $("iframe").contents().find("body")
+  .append("I'm in an iframe!");
+    </script>
+</body>
+</html>

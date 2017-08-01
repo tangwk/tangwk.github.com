@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("/CSSTest/CssHooks.html", function (data, status) {
+                alert("数据：" + data + "\n状态：" + status);
+            });
+        });
+    });
+</script>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button>输出每个列表项的值</button>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Soda</li>
+    </ul>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            x = $("li").toArray()
+            for (i = 0; i < x.length; i++) {
+                alert(x[i].innerHTML);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        p {
+            height: 30px;
+            width: 150px;
+            background-color: #ccf;
+        }
+
+        div {
+            height: 30px;
+            width: 150px;
+            background-color: #cfc;
+        }
+    </style>
+</head>
+<body>
+    <p>paragraph</p>
+    <div>division</div>
+</body>
+</html>
+<script>
+    $("p").click(function (event) {
+        //阻止调用其它事件处理函数。
+        event.stopImmediatePropagation();
+    }); $("p").click(function (event) {
+        // This function won't be executed
+        $(this).css("background-color", "#f00");
+    });
+    $("div").click(function (event) {
+        // This function will be executed
+        $(this).css("background-color", "#f00");
+    });
+</script>

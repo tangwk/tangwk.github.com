@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        div {
+            color: blue;
+        }
+        p {
+            color: green;
+            margin: 0;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<p></p>
+<span></span>
+</body>
+</html>
+<script>
+    $(function () {
+        var arr = [1, 9, 3, 8, 6, 1, 5, 9, 4, 7, 3, 8, 6, 9, 1];
+        $("div").text(arr.join(", "));
+        arr = jQuery.grep(arr, function (n, i) {
+            return (n !== 5 && i > 4);
+        });
+        $("p").text(arr.join(", "));
+        arr = jQuery.grep(arr, function (a) {
+            return a !== 9;
+        });
+        $("span").text(arr.join(", "));
+    })
+</script>

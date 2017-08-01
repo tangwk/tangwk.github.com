@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <pre id="original"></pre>
+    <pre id="trimmed"></pre>
+</body>
+</html>
+<script>
+    $(function () {
+        var str = "         lots of spaces before and after         ";
+        $("#original").html("Original String: '" + str + "'");
+        $("#trimmed").html("$.trim()'ed: '" + $.trim(str) + "'");
+    })
+</script>

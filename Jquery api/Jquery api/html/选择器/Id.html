@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="notMe"><p>id="notMe"</p></div>
+    <div id="myDiv">id="myDiv"</div>
+    <hr />
+    <span id="foo:bar">第一个</span>
+    <span id="foo[bar]">第二个</span>
+    <span id="foo.bar">第三个</span>
+</body>
+</html>
+<script type="text/javascript">    $(document).ready(function () {     
+        //千万记住第一个red是不能进行省略的。 
+        $("#myDiv").css({ "background-color": "red" });
+        $("#foo\\[bar\\]").css({  "background-color": "red" });
+       
+    })</script>

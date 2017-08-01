@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <script type="text/javascript">
+    $(document)
+        .ready(function () {
+            $("button")
+                .click(function () {
+                    $("p").toggle();
+                });
+        });
+</script>
+
+</head>
+<body>
+    <h4>用于绑定两个或者多个事件处理器函数，以响应被选元素的轮流的click事件。如果元素是可见的，切换为隐藏；如果元素是隐藏的，切换为可见的。</h4>
+    <button type="button">切换</button>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+   
+</body>
+</html>

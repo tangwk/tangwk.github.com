@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <h4>
+
+        给第一个div之后的所有元素加个类
+    </h4>
+    <div style="width:70%;position:absolute;left:100px;top:100px">
+        <div style="margin:50px;background-color:yellow">
+            <p>点击下面的按钮可以设置本段落的最近的父（祖先）元素的背景色。</p>
+            </div>
+            </div>
+            <button>点击这里</button>
+            <script type="text/javascript">
+
+                $("button").click(function () {
+                    $("p").offsetParent().css("background-color", "red");
+                });
+
+            </script>
+</body>
+</html>

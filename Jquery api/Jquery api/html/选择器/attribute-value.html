@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>[attribute=value]</p>
+    <input type="checkbox" name="newsletter" value="Hot Fuzz"/>
+    <input type="checkbox" name="newsletter" value="Cold Fusion" />
+    <input type="checkbox" name="accept" value="Evil Plans" />
+    <hr />
+    <p>[attribute!=value]</p>
+    <input type="checkbox" name="newsletter1" value="Hot Fuzz" />
+    <input type="checkbox" name="newsletter1" value="Cold Fusion" />
+    <input type="checkbox" name="accept" value="Evil Plans" />
+    <hr />
+    <p>[attribute^=value]</p>
+    <input name="newsletter"/>
+    <input name="milkmen" />
+    <input name="newsboy" />
+    <hr />
+    <p>[attribute$=value]</p>
+    <input name="newsletter" />
+    <input name="milkmen" />
+    <input name="job" />
+    <hr />s
+    <p>[attribute*=value]</p>
+    <input name="men-news" />
+    <input name="milkman" />
+    <input name="lettermen2" />
+    <input name="newmilk" />
+
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input[name='newsletter']").attr("checked", true);
+        $("input[name!='newsletter1']").attr("checked", true);
+        $("input[name^='news']").css({ "background-color": "yellow" });
+        $("input[name$='letter']").css({ "background-color": "yellow" });
+        $("input[name*='man']").css({ "background-color": "red" });
+    })</script>

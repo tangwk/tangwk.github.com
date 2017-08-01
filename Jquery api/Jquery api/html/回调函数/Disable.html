@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    $(function () {
+        $(function() {
+            // 一个将被添加到列表的简单的函数
+            var foo = function(value) {
+                alert(value);
+            };
+            var callbacks = $.Callbacks();
+            // 添加上面的函数到回调列表
+            callbacks.add(foo);
+            // 传入参数调用所有回调列表函数
+            callbacks.fire("foo");
+            // 输出: foo     
+            // 禁用回调函数
+            callbacks.disable();
+            // 尝试用 "foobar" 作为参数
+            callbacks.fire("foobar");
+            // foobar 不会被输出
+        });
+    })
+</script>

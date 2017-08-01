@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="txt"><h2>通过 AJAX 改变文本</h2></div>
+    <button>改变内容</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("div").ajaxSuccess(function () {
+            alert("AJAX 请求已成功完成");
+        });
+        $("button").click(function () {
+            $("div").load("/example/jquery/demo_ajax_load.txt");
+        });
+    $("div").ajaxStop(function(){
+        alert("所有 AJAX 请求已完成");
+    });
+    $("button").click(function(){
+        $("div").load("/example/jquery/demo_ajax_load.txt");
+        $("div").load("/example/jquery/demo_ajax_load.asp");
+    });
+      $("div").ajaxStart(function(){
+    $(this).html("<img src='/CSS/test1.jpg>");
+  });
+  $("button").click(function(){
+    $("div").load("/example/jquery/demo_ajax_load.asp");
+  });
+
+  $("div").ajaxSend(function (e, xhr, opt) {
+      $(this).html("正在请求：" + opt.url);
+  });
+  $("button").click(function () {
+      $("div").load("/example/jquery/demo_ajax_load.asp");
+  });
+
+  $("div").ajaxError(function () {
+      alert("发生错误！");
+  });
+  $("button").click(function () {
+      $("div").load("wrongfile.txt");
+  });
+    });
+
+</script>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<p>This is a paragraph.</p>
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(".btn1").click(function () {
+            $("p").slideUp();
+        });
+        $(".btn2").click(function () {
+            $("p").slideDown();
+        });
+        //用200毫秒快速将段落滑上或滑下，之后弹出一个对话框
+        $("p").slideToggle("fast", function () {
+            alert("Animation Done.");
+        });
+    });
+</script>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p onmouseover="getRelElement(event)">
+        Mouse over this paragraph.
+    </p>
+</body>
+</html>
+<script>
+    function getRelElement(event) {
+        //在事件中涉及的其它任何DOM元素。
+        //对于 mouseout 事件，它指向被进入的元素；对于 mousein 事件，它指向被离开的元素。
+        var txt = "The cursor just exited the ";
+        txt = txt + event.relatedTarget.tagName + " element.";
+        alert(txt);
+    }
+</script>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div>jQuery([selector,[context]])jQuery 的核心功能都是通过这个函数实现的。 jQuery中的一切都基于这个函数，或者说都是在以某种方式使用这个函数。这个函数最基本的用法就是向它传递一个表达式（通常由 CSS 选择器组成），然后根据这个表达式来查找所有匹配的元素
+        jQuery(html,[ownerDocument])根据提供的原始 HTML 标记字符串，动态创建由 jQuery 对象包装的 DOM 元素。同时设置一系列的属性、事件等。
+        jQuery(callback)当DOM加载完成后要执行的函数,就是$(document).ready(function (){}函数。
+        jQuery.holdReady(hold) 暂停或恢复.ready() 事件的执行。指示是否暂停或恢复被请求的ready事件
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(document.body).css("background", "red");
+        //动态创建一个 div 元素（以及其中的所有内容），并将它追加到 body 元素中
+        $("<div><p>Hello</p></div>").appendTo("body");
+    })
+</script>

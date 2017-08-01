@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<script src="../Scripts/jquery-1.12.0.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p id="someElement"></p>
+    <p id="anotherElement"></p>
+</body>
+</html>
+<script>
+    $(function() {
+        var obj = jQuery.parseJSON('{"name":"John"}');
+        alert(obj.name === "John");
+    });
+    $(function () {
+        var xml = "<rss version='2.0'><channel><title>RSS Title</title></channel></rss>",
+            xmlDoc = $.parseXML(xml),
+            $xml = $(xmlDoc),
+            $title = $xml.find("title");
+        // 将 "RSS Title" 附加到 #someElement
+        $("#someElement").append($title.text());
+        // 标题改为 “XML Title”
+        $title.text("XML Title");
+        // 将 "XML Title" 附加到 #anotherElement
+        $("#anotherElement").append($title.text());
+    })
+</script>

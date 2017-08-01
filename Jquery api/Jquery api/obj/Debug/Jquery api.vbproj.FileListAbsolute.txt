@@ -1,0 +1,9 @@
+F:\项目实训\Jquery api\Jquery api\bin\Jquery api.dll.config
+F:\项目实训\Jquery api\Jquery api\bin\Jquery api.dll
+F:\项目实训\Jquery api\Jquery api\bin\Jquery api.pdb
+F:\项目实训\Jquery api\Jquery api\bin\Jquery api.xml
+F:\项目实训\Jquery api\Jquery api\obj\Debug\Jquery_api.Resources.resources
+F:\项目实训\Jquery api\Jquery api\obj\Debug\Jquery api.vbproj.GenerateResource.Cache
+F:\项目实训\Jquery api\Jquery api\obj\Debug\Jquery api.dll
+F:\项目实训\Jquery api\Jquery api\obj\Debug\Jquery api.xml
+F:\项目实训\Jquery api\Jquery api\obj\Debug\Jquery api.pdb

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+<h4>显示所有段落</h4>
+<p id="cd1" style="display: none">test1</p>
+<p id="cd2" style="display: none">test2</p>
+<p id="cd3" style="display: none">test3</p>
+<script type="text/javascript">
+    $("p#cd1").show("slow");
+    $("p#cd2")
+        .show("fast",
+            function() {
+                $(this).text("Animation Done！");
+            });
+    $("p#cd3")
+        .show(4000,
+            function() {
+                $(this).text("Animation Done...");
+            });
+
+</script>
+</body>
+</html>

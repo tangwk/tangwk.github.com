@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        div .slide .sli {
+            background-color: gray;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            border: solid 1px green;
+        }
+
+        .slide {
+            height: 120px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <p>中航电测 - 争做世界电测先锋</p>
+        <p>在这里，你可以愉快的学习和生活</p>
+    </div>
+    <button class="sli">请点击这里</button>
+    <script type="text/javascript">
+        $(document)
+            .ready(function () {
+                $(".sli")
+                    .click(function () {
+                        $(".slide").slideToggle("slow");
+                    });
+            });
+
+    </script>
+</body>
+</html>

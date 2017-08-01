@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>
+如果某个元素是父元素中唯一的子元素，那将会被匹配
+如果父元素中含有其他元素，那将不会被匹配。（注：这里的其他元素并不包含文本节点，如：
+ 图片用$('p img:only-child')是可以匹配的
+/p>
+    <ul>
+        <li>John</li>
+        <li>Karl</li>
+        <li>Brandon</li>
+    </ul>
+    <ul>
+        <li>Glen</li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("ul li:only-child").css({ "background-color": "blue" });
+
+
+    })</script>
+

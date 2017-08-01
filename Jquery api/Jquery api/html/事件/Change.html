@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p>在某个域被使用或改变时，它会改变颜色。</p>
+    Enter your name: <input class="field" type="text" />
+    <p>
+        Car:
+        <select class="field" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+    </p>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $(".field").change(function () {
+            $(this).css("background-color", "#FFFFCC");
+        });
+    });
+</script>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p>窗口大小被调整过 <span>0</span> 次。</p>
+    <p>请试着重新调整浏览器窗口的大小。</p>
+</body>
+</html>
+<script>
+    x = 0;
+    $(document).ready(function () {
+        $(window).resize(function () {
+            $("span").text(x += 1);
+        });
+    });
+</script>

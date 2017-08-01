@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    <button>使用 Ajax 来获得并运行一个 JavaScript 文件</button>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.getScript("/example/jquery/demo_ajax_script.js");
+        });
+    });
+</script>

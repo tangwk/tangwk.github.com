@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{52539C17-9B02-4ED1-9FA9-491FDAC4BE22}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Jquery_api</RootNamespace>
+    <AssemblyName>Jquery api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Jquery api.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Jquery api.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\focus.css" />
+    <Content Include="html\AJAX\Ajax.html" />
+    <Content Include="html\AJAX\Complete.html" />
+    <Content Include="html\AJAX\ErrorToSuccess.html" />
+    <Content Include="html\AJAX\Get.html" />
+    <Content Include="html\AJAX\GetJSON.html" />
+    <Content Include="html\AJAX\GetScript.html" />
+    <Content Include="html\AJAX\Load.html" />
+    <Content Include="html\AJAX\Post.html" />
+    <Content Include="html\AJAX\Prefilter.html" />
+    <Content Include="html\AJAX\Serialize1.html" />
+    <Content Include="html\AJAX\SerializeArray.html" />
+    <Content Include="html\AJAX\Setup.html" />
+    <Content Include="html\延迟对象\All.html" />
+    <Content Include="html\延迟对象\Always.html" />
+    <Content Include="html\延迟对象\Done.html" />
+    <Content Include="html\延迟对象\Fail.html" />
+    <Content Include="html\延迟对象\Pipe.html" />
+    <Content Include="html\延迟对象\Promise.html" />
+    <Content Include="html\延迟对象\Then.html" />
+    <Content Include="html\回调函数\Add.html" />
+    <Content Include="html\回调函数\Callbacks.html" />
+    <Content Include="html\回调函数\Disable.html" />
+    <Content Include="html\回调函数\EmpetyToRemove.html" />
+    <Content Include="html\CSS\FocusCss.css" />
+    <Content Include="html\CSS\liu.png" />
+    <Content Include="html\CSS\picture.jpg" />
+    <Content Include="html\CSS\test0.jpg" />
+    <Content Include="html\CSS\test1.jpg" />
+    <Content Include="html\CSS\test2.jpg" />
+    <Content Include="html\CSS\test3.jpg" />
+    <Content Include="html\事件\Animate.html" />
+    <Content Include="html\事件\Bind.html" />
+    <Content Include="html\事件\Blur.html" />
+    <Content Include="html\事件\Change.html" />
+    <Content Include="html\事件\Click.html" />
+    <Content Include="html\事件\DbClick.html" />
+    <Content Include="html\事件\Delay.html" />
+    <Content Include="html\事件\Delegate.html" />
+    <Content Include="html\事件\Error.html" />
+    <Content Include="html\事件\Fade.html" />
+    <Content Include="html\事件\Focus.html" />
+    <Content Include="html\事件\Hover.html" />
+    <Content Include="html\事件\JQueryFxinterval.html" />
+    <Content Include="html\事件\JQueryFxoff.html" />
+    <Content Include="html\事件\KeyDown.html" />
+    <Content Include="html\事件\KeyPress.html" />
+    <Content Include="html\事件\KeyUp.html" />
+    <Content Include="html\事件\Live.html" />
+    <Content Include="html\事件\Mouse.html" />
+    <Content Include="html\事件\Off.html" />
+    <Content Include="html\事件\On.html" />
+    <Content Include="html\事件\One.html" />
+    <Content Include="html\事件\Ready.html" />
+    <Content Include="html\事件\Resize.html" />
+    <Content Include="html\事件\Scroll.html" />
+    <Content Include="html\事件\Select.html" />
+    <Content Include="html\事件\ShowAndHide.html" />
+    <Content Include="html\事件\SlideDownToToggle.html" />
+    <Content Include="html\事件\Stop.html" />
+    <Content Include="html\事件\Submit.html" />
+    <Content Include="html\事件\Toggle.html" />
+    <Content Include="html\事件\Trigger.html" />
+    <Content Include="html\事件\TriggerHandler.html" />
+    <Content Include="html\事件\Unbind.html" />
+    <Content Include="html\事件\Unload.html" />
+    <Content Include="html\事件对象\CurrentTarget.html" />
+    <Content Include="html\事件对象\Data.html" />
+    <Content Include="html\事件对象\DelegateTarget.html" />
+    <Content Include="html\事件对象\IsDefaultPrevented.html" />
+    <Content Include="html\事件对象\IsImmediatePropagationStopped.html" />
+    <Content Include="html\事件对象\IsPropagationStopped.html" />
+    <Content Include="html\事件对象\Namespace.html" />
+    <Content Include="html\事件对象\Page.html" />
+    <Content Include="html\事件对象\PreventDefault.html" />
+    <Content Include="html\事件对象\RelatedTarget.html" />
+    <Content Include="html\事件对象\Result.html" />
+    <Content Include="html\事件对象\StopImmediatePropagation.html" />
+    <Content Include="html\事件对象\StopPropagation.html" />
+    <Content Include="html\事件对象\Target.html" />
+    <Content Include="html\事件对象\TimeStamp.html" />
+    <Content Include="html\事件对象\Type.html" />
+    <Content Include="html\事件对象\Which.html" />
+    <Content Include="html\核心\test0.jpg" />
+    <Content Include="html\核心\JQueryCallback.html" />
+    <Content Include="html\核心\JQueryClearQueue.html" />
+    <Content Include="html\核心\JQueryContext.html" />
+    <Content Include="html\核心\JQueryData.html" />
+    <Content Include="html\核心\JQueryDequeue.html" />
+    <Content Include="html\核心\JQueryEach.html" />
+    <Content Include="html\核心\JQueryExtend.html" />
+    <Content Include="html\核心\JQueryFn.html" />
+    <Content Include="html\核心\JQueryGet.html" />
+    <Content Include="html\核心\JQueryHold.html" />
+    <Content Include="html\核心\JQueryHtmlDocument.html" />
+    <Content Include="html\核心\JQueryIndex.html" />
+    <Content Include="html\核心\jQueryNoConflict.html" />
+    <Content Include="html\核心\JQueryOne.html" />
+    <Content Include="html\核心\JQueryQueue.html" />
+    <Content Include="html\核心\JQueryRemoveData.html" />
+    <Content Include="html\核心\JQuerySelector.html" />
+    <Content Include="html\核心\JQuerySize.html" />
+    <Content Include="html\核心\test1.jpg" />
+    <Content Include="html\html-css\cssHooks.html" />
+    <Content Include="html\html-css\height.html" />
+    <Content Include="html\html-css\innerHeight.html" />
+    <Content Include="html\html-css\innerWidth.html" />
+    <Content Include="html\html-css\name.html" />
+    <Content Include="html\html-css\offset.html" />
+    <Content Include="html\html-css\outerHeight.html" />
+    <Content Include="html\html-css\outerWidth.html" />
+    <Content Include="html\html-css\position.html" />
+    <Content Include="html\html-css\scrollLeft.html" />
+    <Content Include="html\html-css\scrollTop.html" />
+    <Content Include="html\html-css\width.html" />
+    <Content Include="html\工具\BrowerVersion.html" />
+    <Content Include="html\工具\Contains.html" />
+    <Content Include="html\工具\Each.html" />
+    <Content Include="html\工具\Error.html" />
+    <Content Include="html\工具\Extend.html" />
+    <Content Include="html\工具\Grep.html" />
+    <Content Include="html\工具\InArray.html" />
+    <Content Include="html\工具\Is.html" />
+    <Content Include="html\工具\MakeArray.html" />
+    <Content Include="html\工具\Map.html" />
+    <Content Include="html\工具\Merge.html" />
+    <Content Include="html\工具\Noop.html" />
+    <Content Include="html\工具\Param.html" />
+    <Content Include="html\工具\Parse.html" />
+    <Content Include="html\工具\Proxy.html" />
+    <Content Include="html\工具\Support.html" />
+    <Content Include="html\工具\ToArray.html" />
+    <Content Include="html\工具\Trim.html" />
+    <Content Include="html\工具\Type.html" />
+    <Content Include="html\工具\Unique.html" />
+    <Content Include="html\工具\When.html" />
+    <Content Include="html\属性\addclass.html" />
+    <Content Include="html\属性\attr.html" />
+    <Content Include="html\属性\html.html" />
+    <Content Include="html\属性\porp.html" />
+    <Content Include="html\属性\removeAttr.html" />
+    <Content Include="html\属性\removeClass.html" />
+    <Content Include="html\属性\removeProp.html" />
+    <Content Include="html\属性\text.html" />
+    <Content Include="html\属性\toggleClass.html" />
+    <Content Include="html\属性\val.html" />
+    <Content Include="html\效果\animate.html" />
+    <Content Include="html\效果\delay.html" />
+    <Content Include="html\效果\fadeIn.html" />
+    <Content Include="html\效果\fadeOut.html" />
+    <Content Include="html\效果\fadeTo.html" />
+    <Content Include="html\效果\fadeToggle.html" />
+    <Content Include="html\效果\finish.html" />
+    <Content Include="html\效果\hide.html" />
+    <Content Include="html\效果\jQuery-fx.html" />
+    <Content Include="html\效果\show.html" />
+    <Content Include="html\效果\slideDown.html" />
+    <Content Include="html\效果\slideToggle.html" />
+    <Content Include="html\效果\slideUp.html" />
+    <Content Include="html\效果\stop.html" />
+    <Content Include="html\效果\toggle.html" />
+    <Content Include="html\文档处理\after-content.html" />
+    <Content Include="html\文档处理\append-content.html" />
+    <Content Include="html\文档处理\appendTo-content.html" />
+    <Content Include="html\文档处理\before-content.html" />
+    <Content Include="html\文档处理\clone.html" />
+    <Content Include="html\文档处理\detach.html" />
+    <Content Include="html\文档处理\empty.html" />
+    <Content Include="html\文档处理\insertAfter.html" />
+    <Content Include="html\文档处理\insertBefore.html" />
+    <Content Include="html\文档处理\prepend-content.html" />
+    <Content Include="html\文档处理\prependTo-content.html" />
+    <Content Include="html\文档处理\remove.html" />
+    <Content Include="html\文档处理\replaceWith.html" />
+    <Content Include="html\文档处理\unwarp.html" />
+    <Content Include="html\文档处理\wrap.html" />
+    <Content Include="html\文档处理\wrapAll.html" />
+    <Content Include="html\文档处理\wrapInner.html" />
+    <Content Include="html\核心\test2.jpg" />
+    <Content Include="html\核心\test3.jpg" />
+    <Content Include="html\筛选\add.html" />
+    <Content Include="html\筛选\addback.html" />
+    <Content Include="html\筛选\andself.html" />
+    <Content Include="html\筛选\children.html" />
+    <Content Include="html\筛选\closest.html" />
+    <Content Include="html\筛选\contents.html" />
+    <Content Include="html\筛选\end.html" />
+    <Content Include="html\筛选\eq.html" />
+    <Content Include="html\筛选\fifter.html" />
+    <Content Include="html\筛选\find.html" />
+    <Content Include="html\筛选\first.html" />
+    <Content Include="html\筛选\has.html" />
+    <Content Include="html\筛选\hasClass.html" />
+    <Content Include="html\筛选\is.html" />
+    <Content Include="html\筛选\last.html" />
+    <Content Include="html\筛选\map.html" />
+    <Content Include="html\筛选\next.html" />
+    <Content Include="html\筛选\nextall.html" />
+    <Content Include="html\筛选\nextuntil.html" />
+    <Content Include="html\筛选\not.html" />
+    <Content Include="html\筛选\offsetparent.html" />
+    <Content Include="html\筛选\parent.html" />
+    <Content Include="html\筛选\parents.html" />
+    <Content Include="html\筛选\parentsUntil.html" />
+    <Content Include="html\筛选\prev.html" />
+    <Content Include="html\筛选\prevAll.html" />
+    <Content Include="html\筛选\prevUntil.html" />
+    <Content Include="html\筛选\silbings.html" />
+    <Content Include="html\筛选\slice.html" />
+    <Content Include="html\选择器\ancestor descendant.html" />
+    <Content Include="html\选择器\animated.html" />
+    <Content Include="html\选择器\attribute-value.html" />
+    <Content Include="html\选择器\attribute.html" />
+    <Content Include="html\选择器\attrsel.html" />
+    <Content Include="html\选择器\checked.html" />
+    <Content Include="html\选择器\class.html" />
+    <Content Include="html\选择器\contains-text.html" />
+    <Content Include="html\选择器\disabled.html" />
+    <Content Include="html\选择器\element.html" />
+    <Content Include="html\选择器\empty.html" />
+    <Content Include="html\选择器\enabled.html" />
+    <Content Include="html\选择器\eq-index.html" />
+    <Content Include="html\选择器\first-child.html" />
+    <Content Include="html\选择器\first.html" />
+    <Content Include="html\选择器\focus.html" />
+    <Content Include="html\选择器\gt-index.html" />
+    <Content Include="html\选择器\has-selector.html" />
+    <Content Include="html\选择器\header.html" />
+    <Content Include="html\选择器\hidden.html" />
+    <Content Include="html\选择器\Id.html" />
+    <Content Include="html\选择器\all.html" />
+    <Content Include="html\选择器\input.html" />
+    <Content Include="html\选择器\It-index.html" />
+    <Content Include="html\选择器\lang.html" />
+    <Content Include="html\选择器\last-child.html" />
+    <Content Include="html\选择器\last.html" />
+    <Content Include="html\选择器\notselector.html" />
+    <Content Include="html\选择器\nth-child.html" />
+    <Content Include="html\选择器\odd.html" />
+    <Content Include="html\选择器\only-child.html" />
+    <Content Include="html\选择器\parent-child.html" />
+    <Content Include="html\选择器\parent.html" />
+    <Content Include="html\选择器\password.html" />
+    <Content Include="html\选择器\prev-next.html" />
+    <Content Include="html\选择器\prev-sibling.html" />
+    <Content Include="html\选择器\root.html" />
+    <Content Include="html\选择器\selected.html" />
+    <Content Include="html\选择器\selector.html" />
+    <Content Include="html\选择器\text.html" />
+    <Content Include="html\选择器\visible.html" />
+    <Content Include="Img\nr_banner.jpg" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64523</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64523/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

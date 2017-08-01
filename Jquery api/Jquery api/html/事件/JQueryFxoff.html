@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button id="disable">jQuery.fx.off = true ( 禁用 )</button>
+    <button id="enable">jQuery.fx.off = false ( 启用 )</button>
+    <br><br>
+    <button id="toggle">切换动画</button>
+    <div style="background:#98bf21;height:100px;width:100px;margin:50px;">
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("#disable").click(function () {
+            jQuery.fx.off = true;
+        });
+        $("#enable").click(function () {
+            jQuery.fx.off = false;
+        });
+        $("#toggle").click(function () {
+            $("div").toggle("slow");
+        });
+    });
+</script>

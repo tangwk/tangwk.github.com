@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button id="btn1">向 div 元素添加数据</button><br />
+    <button id="btn2">从 div 元素删除数据</button>
+    <div></div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("div").data("greeting", "Hello World");
+            //添加的是对应的$("div").data("greeting"）即Hello World
+            alert("Greeting is: " + $("div").data("greeting"));
+        });
+        $("#btn2").click(function () {
+            //对应的removeData的方法
+            $("div").removeData("greeting");
+            alert("Greeting is: " + $("div").data("greeting"));
+        });
+    });
+</script>

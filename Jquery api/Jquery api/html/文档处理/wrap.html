@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+<h4>把所有的段落用一个新创建的div包裹起来</h4>
+<div style="background-color: yellow"class="container">
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+</div>
+<script type="text/javascript">
+    $(".inner")
+        .css("background-color", "green")
+        .wrap(function() {
+            return '<div class="' + $(this).text() + '" />';
+
+        });
+</script>
+</body>
+</html>

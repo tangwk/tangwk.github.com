@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <input name="apple" />
+    <input name="flower" checked="checked" />
+    <hr />
+    <table>
+        <tr><td>Header 1</td></tr>
+        <tr><td>Value 1</td></tr>
+        <tr><td>Value 2</td></tr>
+    </table>
+   </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input:not(:checked)").css({ "background-color": "blue" });
+        $("tr:even").css({ "background-color": "blue" });
+    
+
+    })</script>
+
